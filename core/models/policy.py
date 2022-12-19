@@ -19,7 +19,7 @@ class Policy(models.Model):
         (ANNUALLY, 'Annually')
     )
     insurer_company = models.ForeignKey(InsurerCompany, on_delete=models.DO_NOTHING)
-    plans = models.ForeignKey(PolicyPlan)
+    plans = models.ForeignKey(PolicyPlan, on_delete=models.DO_NOTHING)
     insurer_number = models.CharField(max_length=20, null=True, blank=True)
     tpa_number = models.CharField(max_length=20, null=True, blank=True)
     name = models.CharField(max_length=20, null=True, blank=True)
